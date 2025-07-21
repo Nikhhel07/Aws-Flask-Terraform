@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "terraform-state-python2"
+    bucket         = "nikhhel-flask"
     key            = "greeting-app/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
