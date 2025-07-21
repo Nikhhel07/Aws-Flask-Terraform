@@ -87,7 +87,7 @@ resource "aws_iam_role" "ec2_access" {
 }
 
 resource "aws_iam_policy" "ecr_policy" {
-  name = "ECRAccessPolicy"
+  name = "ECRAccessPolicy1"
   policy = jsonencode({
     Version = "2012-10-17",
     Statement = [{
@@ -116,7 +116,7 @@ resource "aws_iam_role_policy_attachment" "ec2_attach" {
 }
 
 resource "aws_iam_instance_profile" "ec2_profile" {
-  name = "ec2-instance-profile"
+  name = "ec2-instance-profile1"
   role = aws_iam_role.ec2_access.name
 }
 
