@@ -71,7 +71,7 @@ resource "aws_instance" "flask_ec2" {
   }
 }
 
-resource "aws_iam_role" "ec2_ecr_access" {
+resource "aws_iam_role" "ec2_access" {
   name = "ec2-ecr-access-role"
 
   assume_role_policy = jsonencode({
@@ -111,7 +111,7 @@ resource "aws_iam_policy" "ecr_policy" {
 
 
 resource "aws_iam_role_policy_attachment" "ec2_attach" {
-  role       = aws_iam_role.ec2_ecr_access.name
+  role       = aws_iam_role.ec2_access.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"
 }
 
