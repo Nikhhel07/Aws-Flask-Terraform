@@ -72,7 +72,7 @@ resource "aws_instance" "flask_ec2" {
 }
 
 resource "aws_iam_role" "ec2_access" {
-  name = "ec2-ecr-access-role"
+  name = "ec2-access-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
